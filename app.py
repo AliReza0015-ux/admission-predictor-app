@@ -18,7 +18,6 @@ def main():
         try:
             research_binary = 1 if research == "Yes" else 0
 
-            # ✅ Make sure these column names match those used during training
             input_df = pd.DataFrame([{
                 "GRE_Score": gre,
                 "TOEFL_Score": toefl,
