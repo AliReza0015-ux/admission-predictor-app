@@ -4,7 +4,6 @@ from model import load_model, predict_admission
 
 def main():
     st.title("🎓 UCLA Admission Predictor")
-
     st.subheader("Enter Your Academic Profile:")
 
     gre = st.number_input("GRE Score", min_value=0, max_value=340)
@@ -19,10 +18,11 @@ def main():
         try:
             research_binary = 1 if research == "Yes" else 0
 
+            # ✅ Make sure these column names match those used during training
             input_df = pd.DataFrame([{
-                "GRE Score": gre,
-                "TOEFL Score": toefl,
-                "University Rating": university_rating,
+                "GRE_Score": gre,
+                "TOEFL_Score": toefl,
+                "University_Rating": university_rating,
                 "SOP": sop,
                 "LOR": lor,
                 "CGPA": cgpa,
