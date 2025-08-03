@@ -20,14 +20,15 @@ def main():
             research_binary = 1 if research == "Yes" else 0
 
             input_df = pd.DataFrame([{
-                "GRE Score": gre,
-                "TOEFL Score": toefl,
-                "University Rating": university_rating,
-                "SOP": sop,
-                "LOR": lor,
-                "CGPA": cgpa,
-                "Research": research_binary
-            }])
+         "GRE_Score": gre,
+         "TOEFL_Score": toefl,
+         "University_Rating": university_rating,
+          "SOP": sop,
+          "LOR": lor,
+        "CGPA": cgpa,
+        "Research": research_binary
+    }])
+
 
             model = load_model()
             result = predict_admission(model, input_df)
