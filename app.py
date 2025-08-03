@@ -19,12 +19,12 @@ def main():
         try:
             research_binary = 1 if research == "Yes" else 0
 
-            input_df = pd.DataFrame([{
-         "GRE_Score": gre,
-         "TOEFL_Score": toefl,
-         "University_Rating": university_rating,
-          "SOP": sop,
-          "LOR": lor,
+     input_df = pd.DataFrame([{
+        "GRE_Score": gre,
+        "TOEFL_Score": toefl,
+        "University_Rating": university_rating,
+        "SOP": sop,
+        "LOR": lor,
         "CGPA": cgpa,
         "Research": research_binary
     }])
